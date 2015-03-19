@@ -2,7 +2,7 @@ class VirtualAttributes::Base
   module Casts
     extend ActiveSupport::Concern
 
-    TYPES = ActiveRecord::Base.connection.native_database_types.keys - [:primary_key]
+    TYPES = ActiveRecord::Type::Value.subclasses.map{ |k| k.name.split('::').last.underscore.to_sym }
 
     def write_attribute(column, value)
       super column, cast_type(column, value)
