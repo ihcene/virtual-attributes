@@ -14,7 +14,7 @@ class VirtualAttributes::Base
         if default
           cast_type(
             column,
-            default.respond_to?(:call) ? default.call : default)
+            default.respond_to?(:call) ? default.call(self) : default)
         end
       end
   end
