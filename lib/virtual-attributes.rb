@@ -1,13 +1,13 @@
 class VirtualAttributes
 end
 
-require 'virtual_attributes/base/attributes'
-require 'virtual_attributes/base/casts'
-require 'virtual_attributes/base/conversions'
-require 'virtual_attributes/base/defaults'
-require 'virtual_attributes/base/validations'
-require 'virtual_attributes/base'
+require 'virtual-attributes/base/attributes'
+require 'virtual-attributes/base/casts'
+require 'virtual-attributes/base/conversions'
+require 'virtual-attributes/base/defaults'
+require 'virtual-attributes/base/validations'
+require 'virtual-attributes/base'
 
-require 'virtual_attributes/serialization'
+require 'virtual-attributes/serialization'
 
 ActiveRecord::Base.singleton_class.send :include, VirtualAttributes::Serialization::ClassMethods
