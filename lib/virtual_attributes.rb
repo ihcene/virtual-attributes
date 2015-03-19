@@ -1,7 +1,7 @@
 class VirtualAttributes
 end
 
-require 'virtual_attributes/base/attibutes'
+require 'virtual_attributes/base/attributes'
 require 'virtual_attributes/base/casts'
 require 'virtual_attributes/base/conversions'
 require 'virtual_attributes/base/defaults'
