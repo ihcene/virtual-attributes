@@ -13,7 +13,7 @@ class VirtualAttributes::Base
     end
 
     def read_attribute(column)
-      instance_variable_get("@#{column}").presence
+      instance_variable_get("@#{column}")
     end
 
     def write_attribute(column, value)
