@@ -3,9 +3,8 @@ class VirtualAttributes::Base
     extend ActiveSupport::Concern
 
     def read_attribute(column)
-      super.tap do |val|
-        val.nil? ? default_value(column) : val
-      end
+      val = super
+      val.nil? ? default_value(column) : val
     end
 
     private
