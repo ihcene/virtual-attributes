@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'virtual-attributes'
-  s.version     = '0.1.1'
+  s.version     = '0.1.2'
   s.date        = '2015-03-19'
   s.summary     = "Enhance ActiveRecord's Serialize with typed virtual attributes"
   s.description = "Allow you to add virtual type attributes in one single serialized ActiveRecord attribute"
