@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split($/)
   s.require_paths = ["lib"]
   s.required_ruby_version = '>= 1.9.3'
-  s.homepage    = 'http://rubygems.org/gems/hola'
+  s.homepage    = 'https://github.com/ihcene/virtual-attributes'
   s.license     = 'MIT'
   s.add_runtime_dependency 'activerecord', '>= 3.0', '< 5.0'
   s.add_development_dependency 'rspec', '~> 3.2', '>= 3.2.0'
