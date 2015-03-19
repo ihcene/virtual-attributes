@@ -8,7 +8,7 @@ class VirtualAttributes::Base
         when Hash
           new(val)
         when String
-          val.blank? ? new({}) : raise(ArgumentError('String is not convertible to #{self.name}'))
+          val.blank? ? new({}) : raise(ArgumentError.new("String is not convertible to #{self.name}"))
         when self
           val
         when NilClass
