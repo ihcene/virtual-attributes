@@ -19,6 +19,11 @@ module VirtualAttributes::Serialization
         define_method :"#{attr_name}=" do |val|
           super self.class.const_get(klass_name).wrap(val)
         end
+
+        define_method :"#{attr_name}" do
+          val = super()
+          val.is_a?(self.class.const_get(klass_name)) ? val : self.class.const_get(klass_name).wrap(val)
+        end
       else
         super(*args)
       end
